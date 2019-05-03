@@ -10,8 +10,8 @@
 service sys_hwservicemanager /system/bin/hwservicemanager
     user root
     group root
-    setenv PATH /system/bin
-    setenv LD_LIBRARY_PATH /system/lib64:/system/lib
+    setenv PATH /system/bin:/system/vendor/bin:/vendor/bin
+    setenv LD_LIBRARY_PATH /system/lib64:/system/lib:/system/vendor/lib64:/system/vendor/lib:/vendor/lib64:/vendor/lib
     onrestart setprop hwservicemanager.ready false
     disabled
     oneshot
